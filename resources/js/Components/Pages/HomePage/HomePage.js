@@ -4,7 +4,7 @@ import { NavbarDefault } from "../../Assets/Components/NavbarDefault/NavbarDefau
 export const HomePage = () => {
     return (
         <div>
-            {/* <NavbarDefault /> */}
+            <NavbarDefault />
             <div>HomePage</div>
         </div>
     );

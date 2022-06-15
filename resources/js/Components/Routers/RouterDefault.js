@@ -6,8 +6,8 @@ import { Login } from '../Pages/Login/Login'
 export const RouterDefault = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}/>
-      <Route path="/login" element={<Login />}/>  
+      <Route path="/" element={<Login />}/>
+      <Route path="/signin" element={<HomePage />}/>
     </Routes>
   )
 }
