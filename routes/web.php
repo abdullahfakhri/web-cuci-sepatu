@@ -20,6 +20,24 @@ Route::get('/', function () {
 Route::get('/signin', function () {
     return view('welcome');
 });
+Route::get('/login', function () {
+    return view('welcome');
+});
+Route::get('/home', function () {
+    return view('welcome');
+});
+Route::get('/testi', function () {
+    return view('welcome');
+});
+Route::get('/service', function () {
+    return view('welcome');
+});
+Route::get('/contact', function () {
+    return view('welcome');
+});
+Route::get('/track your shoes', function () {
+    return view('welcome');
+});
 
 Route::middleware([
     'auth:sanctum',
