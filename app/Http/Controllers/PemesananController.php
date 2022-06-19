@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jenis_cuci;
+use App\Models\Pelanggan;
 use App\Models\Pemesanan;
 use Illuminate\Http\Request;
 
@@ -9,14 +11,23 @@ class PemesananController extends Controller
 {
     function index()
     {
-        $pemesanan = Pemesanan::paginate(10);
+        $pemesanan = Pemesanan::select('pemesanan.*', 'pelanggan.nama_pelanggan', 'jenis_cuci.nama_jenis_cuci')
+            ->join('pelanggan', 'pemesanan.pelanggan_id', '=', 'pelanggan.id')
+            ->join('jenis_cuci', 'pemesanan.jenis_cuci_id', '=', 'jenis_cuci.id')
+            ->paginate(10);
 
-        return view('pemesanan.index', ['pemesanan' => $pemesanan]);
+        return view('dashboard.pemesanan.index', ['pemesanan' => $pemesanan]);
     }
 
     function create()
     {
-        return view('pemesanan.create');
+        $pelanggan = Pelanggan::all();
+        $jenis_cuci = Jenis_cuci::all();
+
+        return view('dashboard.pemesanan.create', [
+            'pelanggan' => $pelanggan,
+            'jenis_cuci' => $jenis_cuci,
+        ]);
     }
 
     function store(Request $request)
@@ -34,8 +45,13 @@ class PemesananController extends Controller
 
     function edit(Pemesanan $pemesanan)
     {
-        return view('pemesanan.edit', [
-            'item' => $pemesanan
+        $pelanggan = Pelanggan::all();
+        $jenis_cuci = Jenis_cuci::all();
+
+        return view('dashboard.pemesanan.edit', [
+            'item' => $pemesanan,
+            'pelanggan' => $pelanggan,
+            'jenis_cuci' => $jenis_cuci,
         ]);
     }
 
@@ -47,7 +63,7 @@ class PemesananController extends Controller
         return redirect()->route('pemesanan.index');
     }
 
-    function delete(Pemesanan $pemesanan)
+    function destroy(Pemesanan $pemesanan)
     {
         $pemesanan->delete();
 

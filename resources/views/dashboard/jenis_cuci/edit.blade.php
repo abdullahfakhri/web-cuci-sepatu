@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Jenis Cuci &raquo; Edit &raquo; {{ $item->nama_jenis_cuci }}
+            Jenis Cuci &raquo; Sunting &raquo; {{ $item->nama_jenis_cuci }}
         </h2>
     </x-slot>
 

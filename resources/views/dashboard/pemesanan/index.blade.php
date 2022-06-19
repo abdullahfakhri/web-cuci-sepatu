@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Pelanggan') }}
+            {{ __('Pemesanan') }}
         </h2>
     </x-slot>
 
@@ -9,9 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
             <div class="mb-10">
-                <a href="{{ route('pelanggan.create') }}"
+                <a href="{{ route('pemesanan.create') }}"
                     class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                    + Buat Pelanggan
+                    + Buat Pemesanan
                 </a>
             </div>
             <div class="bg-white">
@@ -19,25 +19,27 @@
                     <thead>
                         <tr>
                             <th class="border px-6 py-4">ID</th>
-                            <th class="border px-6 py-4">Nama Pelanggan</th>
-                            <th class="border px-6 py-4">Alamat</th>
-                            <th class="border px-6 py-4">Kontak</th>
+                            <th class="border px-6 py-4">Nama Barang</th>
+                            <th class="border px-6 py-4">Pelanggan</th>
+                            <th class="border px-6 py-4">Jenis Cuci</th>
+                            <th class="border px-6 py-4">Status</th>
                             <th class="border px-6 py-4">Tanggal dibuat</th>
                             <th class="border px-6 py-4">Tanggal terakhir di sunting</th>
                             <th class="border px-6 py-4">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($pelanggan as $item)
+                        @forelse ($pemesanan as $item)
                             <tr>
                                 <td class="border px-6 py-4 text-center">{{ $item->id }}</td>
+                                <td class="border px-6 py-4 text-center">{{ $item->nama_barang }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->nama_pelanggan }}</td>
-                                <td class="border px-6 py-4 text-center">{{ $item->alamat }}</td>
-                                <td class="border px-6 py-4 text-center">{{ $item->kontak }}</td>
+                                <td class="border px-6 py-4 text-center">{{ $item->nama_jenis_cuci }}</td>
+                                <td class="border px-6 py-4 text-center">{{ $item->status }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->created_at }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->updated_at }}</td>
                                 <td class="border px-6 py-4 text-center">
-                                    <a href="{{ route('pelanggan.edit', $item->id) }}"
+                                    <a href="{{ route('pemesanan.edit', $item->id) }}"
                                         class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                         {{-- <i class="bi bi-pencil-square"></i> --}}
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -48,7 +50,7 @@
                                                 d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                                         </svg>
                                     </a><br />
-                                    <form action="{{ route('pelanggan.destroy', $item->id) }}" method="POST"
+                                    <form action="{{ route('pemesanan.destroy', $item->id) }}" method="POST"
                                         class="inline-block">
                                         {!! method_field('delete') . csrf_field() !!}
                                         <button type="submit"
@@ -66,7 +68,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7" class="border text-center p-5">
+                                <td colspan="8" class="border text-center p-5">
                                     Data Not Found
                                 </td>
                             </tr>
@@ -75,7 +77,7 @@
                 </table>
             </div>
             <div class="text-centre mt-5">
-                {{ $pelanggan->links() }}
+                {{ $pemesanan->links() }}
             </div>
         </div>
     </div>

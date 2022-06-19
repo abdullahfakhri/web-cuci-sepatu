@@ -11,7 +11,7 @@
             <div class="mb-10">
                 <a href="{{ route('jenis-cuci.create') }}"
                     class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                    + Create Jenis Cuci
+                    + Buat Jenis Cuci
                 </a>
             </div>
             <div class="bg-white">
@@ -22,7 +22,7 @@
                             <th class="border px-6 py-4">Nama Jenis Cuci</th>
                             <th class="border px-6 py-4">Tanggal dibuat</th>
                             <th class="border px-6 py-4">Tanggal terakhir di sunting</th>
-                            <th class="border px-6 py-4"></th>
+                            <th class="border px-6 py-4">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +61,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4" class="border text-center p-5">
+                                <td colspan="5" class="border text-center p-5">
                                     Data Not Found
                                 </td>
                             </tr>
