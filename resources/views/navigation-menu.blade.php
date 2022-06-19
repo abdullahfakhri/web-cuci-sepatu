@@ -16,6 +16,24 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('pelanggan.index') }}" :active="request()->routeIs('pelanggan.index')">
+                        {{ __('Pelanggan') }}
+                    </x-jet-nav-link>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('jenis-cuci.index') }}" :active="request()->routeIs('jenis-cuci.index')">
+                        {{ __('Jenis Cuci') }}
+                    </x-jet-nav-link>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('pemesanan.index') }}" :active="request()->routeIs('pemesanan.index')">
+                        {{ __('Pemesanan') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

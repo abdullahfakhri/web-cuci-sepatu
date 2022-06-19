@@ -26,7 +26,7 @@ Route::prefix('dashboard')
         Route::get('/', function () {
             return view('dashboard');
         })->name('dashboard');
-        Route::resource('/pelanggan', PelangganController::class);
-        Route::resource('/pemesanan', PemesananController::class);
-        Route::resource('/jenis-cuci', JenisCuciController::class);
+        Route::resource('pelanggan', PelangganController::class);
+        Route::resource('pemesanan', PemesananController::class);
+        Route::resource('jenis-cuci', JenisCuciController::class);
     });
