@@ -11,12 +11,12 @@ class PelangganController extends Controller
     {
         $pelanggan = Pelanggan::paginate(10);
 
-        return view('pelanggan.index', ['pelanggan' => $pelanggan]);
+        return view('dashboard.pelanggan.index', ['pelanggan' => $pelanggan]);
     }
 
     function create()
     {
-        return view('pelanggan.create');
+        return view('dashboard.pelanggan.create');
     }
 
     function store(Request $request)
@@ -33,7 +33,7 @@ class PelangganController extends Controller
 
     function edit(Pelanggan $pelanggan)
     {
-        return view('pelanggan.edit', [
+        return view('dashboard.pelanggan.edit', [
             'item' => $pelanggan
         ]);
     }

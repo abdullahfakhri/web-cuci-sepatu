@@ -11,12 +11,12 @@ class JenisCuciController extends Controller
     {
         $jenis_cuci = Jenis_cuci::paginate(10);
 
-        return view('jenis_cuci.index', ['jenis_cuci' => $jenis_cuci]);
+        return view('dashboard.jenis_cuci.index', ['jenis_cuci' => $jenis_cuci]);
     }
 
     function create()
     {
-        return view('jenis_cuci.create');
+        return view('dashboard.jenis_cuci.create');
     }
 
     function store(Request $request)
@@ -26,12 +26,12 @@ class JenisCuciController extends Controller
             'nama_jenis_cuci' => $request->nama_jenis_cuci,
         ]);
 
-        return redirect()->route('jenis_cuci.index');
+        return redirect()->route('jenis-cuci.index');
     }
 
     function edit(Jenis_cuci $jenis_cuci)
     {
-        return view('jenis_cuci.edit', [
+        return view('dashboard.jenis_cuci.edit', [
             'item' => $jenis_cuci
         ]);
     }
@@ -41,13 +41,13 @@ class JenisCuciController extends Controller
         $data = $request->all();
         $jenis_cuci->update($data);
 
-        return redirect()->route('jenis_cuci.index');
+        return redirect()->route('jenis-cuci.index');
     }
 
-    function delete(Jenis_cuci $jenis_cuci)
+    function destroy(Jenis_cuci $jenis_cuci)
     {
         $jenis_cuci->delete();
 
-        return redirect()->route('jenis_cuci.index');
+        return redirect()->route('jenis-cuci.index');
     }
 }
