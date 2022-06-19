@@ -46,7 +46,7 @@ class PelangganController extends Controller
         return redirect()->route('pelanggan.index');
     }
 
-    function delete(Pelanggan $pelanggan)
+    function destroy(Pelanggan $pelanggan)
     {
         $pelanggan->delete();
 
