@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\JenisCuciController;
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\PemesananController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,34 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/signin', function () {
-    return view('welcome');
-});
-Route::get('/login', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
-    return view('welcome');
-});
-Route::get('/testi', function () {
-    return view('welcome');
-});
-Route::get('/service', function () {
-    return view('welcome');
-});
-Route::get('/contact', function () {
-    return view('welcome');
-});
-Route::get('/track your shoes', function () {
-    return view('welcome');
-});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::prefix('dashboard')
+    ->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
+    ->group(function () {
+        Route::get('/', function () {
+            return view('dashboard');
+        })->name('dashboard');
+        Route::resource('pelanggan', PelangganController::class);
+        Route::resource('pemesanan', PemesananController::class);
+        Route::resource('jenis-cuci', JenisCuciController::class);
+    });
