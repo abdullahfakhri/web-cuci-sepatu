@@ -64,7 +64,7 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3 text-right">
                             <button type="submit"
-                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                                class="bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                                 Save
                             </button>
                         </div>

@@ -10,7 +10,7 @@
 
             <div class="mb-10">
                 <a href="{{ route('pelanggan.create') }}"
-                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    class="bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                     + Buat Pelanggan
                 </a>
             </div>
