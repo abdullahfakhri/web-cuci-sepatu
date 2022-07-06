@@ -1,36 +1,36 @@
-<nav x-data="{ open: false }" class="bg-gradient-to-r from-blue-600 to-red-500 border-b border-black-100">
+<nav x-data="{ open: false }" class="bg-grey-800 border-b border-black-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('dashboard.index') }}">
                         <img class="rounded-full" src="{{ asset('/images/logo.jpg') }}" width="50" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="text-white" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link  href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="text-white" href="{{ route('pelanggan.index') }}" :active="request()->routeIs('pelanggan.index')">
+                    <x-jet-nav-link  href="{{ route('pelanggan.index') }}" :active="request()->routeIs('pelanggan.index')">
                         {{ __('Pelanggan') }}
                     </x-jet-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="text-white" href="{{ route('jenis-cuci.index') }}" :active="request()->routeIs('jenis-cuci.index')">
+                    <x-jet-nav-link  href="{{ route('jenis-cuci.index') }}" :active="request()->routeIs('jenis-cuci.index')">
                         {{ __('Jenis Cuci') }}
                     </x-jet-nav-link>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="text-white" href="{{ route('pemesanan.index') }}" :active="request()->routeIs('pemesanan.index')">
+                    <x-jet-nav-link  href="{{ route('pemesanan.index') }}" :active="request()->routeIs('pemesanan.index')">
                         {{ __('Pemesanan') }}
                     </x-jet-nav-link>
                 </div>
@@ -170,7 +170,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+            <x-jet-responsive-nav-link href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>
