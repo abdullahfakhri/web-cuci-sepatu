@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::prefix('dashboard')
     ->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
     ->group(function () {
-        Route::resource('dashboard', DashboardController::class);
+        Route::resource('', DashboardController::class);
         Route::resource('pelanggan', PelangganController::class);
         Route::resource('pemesanan', PemesananController::class);
         Route::resource('jenis-cuci', JenisCuciController::class);
