@@ -1,0 +1,25 @@
+.copyright{
+    text-align: center;
+}
+.main-footer {
+    color: white;
+    background-color: #2e258c;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* margin-top: 1400px; */
+  }
+  .paragraf1{
+    width: 400px;
+  }
+.social{
+    display: flex;
+    flex-direction: row;
+}
+.icon1{
+    margin-left: 60px;
+    margin-right: 15px;
+}
+
+

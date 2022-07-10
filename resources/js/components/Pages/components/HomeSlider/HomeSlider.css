@@ -1,0 +1,24 @@
+.caraouselHeader{
+    padding-top: 73px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    /* border: 3px solid rebeccapurple; */
+}
+/* .carousel-indicators{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  } */
+.carousel1{
+    /* padding-left: 100px;
+    padding-right: 100px; */
+}
+.imgcarousel{
+    object-fit: cover;
+    position: relative;
+    top: -200px;
+}
+.carousel2{
+    height: 500px;
+    width: 1000px;
+}
