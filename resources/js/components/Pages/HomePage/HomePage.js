@@ -23,7 +23,7 @@ export const HomePage = () => {
                 data-sr-init="true"
                 data-sr-complete="true"
             >
-                <h2>About WRAP</h2>
+                <h2 className="about-text">About WRAP</h2>
                 <hr className="primary" />
                 <p>
                     Wrap your Shoes merupakan usaha yang bergerak dibidang jasa
@@ -56,7 +56,16 @@ export const HomePage = () => {
                 </div>
             </div>
             {/* layanan */}
-            <div></div>
+            <div className="layanan-text">
+                <div className="value-layanan">
+                    <h2 className="value-h2">Tujuan Adanya Wrap your Shoes</h2>
+                    <hr className="primary3" />
+                    <p className="value-p">Kami disini untuk memberikan hasil serta kepuasan kepada customer yang mencuci sepatunya di Wrap your Shoes agar sepatu mereka bersih dan terawat.
+                    Dan untuk kami hal yang penting yaitu memberikan edukasi kepada masyarakat akan pentingnya merawat sepatu dan membersihkan sepatu.
+                    Karena itu salah satu tujuan didirikannya Wrap your Shoes
+                    </p>
+                </div>
+            </div>
             <div className="footer">
                 <FooterDefault />
             </div>

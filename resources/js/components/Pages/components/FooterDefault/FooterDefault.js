@@ -1,7 +1,7 @@
 import React from 'react'
 import "../FooterDefault/FooterDefault.css"
-import "../FontawsomeIcons/Font"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import "../FontawsomeIcons/Font"
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const FooterDefault = () => {
   return (
@@ -13,7 +13,7 @@ export const FooterDefault = () => {
             <h3>ABOUT US</h3>
             <ul className="list-unstyled">
               <li className='paragraf1'>
-                Wrap your Shoes merupakan sebuah usaha yang bergerak di bidang jasa 
+                Wrap your Shoes merupakan sebuah usaha yang bergerak di bidang jasa
                 yang menyediakan jasa laundry/cuci sepatu yang berasal dari Kota Depok.
               </li>
               <br/>
@@ -50,10 +50,10 @@ export const FooterDefault = () => {
           {/* Column3 */}
           <div className="col">
             <h4>Our Social Media</h4>
-            <ul className="social list-unstyled">
+            {/* <ul className="social list-unstyled">
               <li className="icon1"><a href='#'><FontAwesomeIcon icon="fa-brands fa-whatsapp" size="xl" /></a></li>
               <li className="icon2"><a href='#'><FontAwesomeIcon icon="fa-brands fa-instagram" size="xl"/></a></li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <hr />

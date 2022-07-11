@@ -5,7 +5,7 @@ import logoWrap from "../../Img/logo.jpeg";
 import { useNavigate } from "react-router-dom";
 
 export const NavbarDefault = () => {
-   
+
   let navigate = useNavigate();
   function handleClick(path) {
     navigate(path)
@@ -16,22 +16,22 @@ export const NavbarDefault = () => {
       path: "/",
       name: "Home",
     },
-    {
-      path: "/about",
-      name: "About",
-    },
+    // {
+    //   path: "/about",
+    //   name: "About",
+    // },
     // {
     //   path: "/Testi",
     //   name: "Testimoni",
     // },
-    {
-      path: "/service",
-      name: "Service",
-    },
-    {
-      path: "/contact",
-      name: "Contact",
-    },
+    // {
+    //   path: "/service",
+    //   name: "Service",
+    // },
+    // {
+    //   path: "/contact",
+    //   name: "Contact",
+    // },
     {
       path: "/trackyourshoes",
       name: "Track your shoes",
@@ -53,16 +53,16 @@ export const NavbarDefault = () => {
     </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="link-nav ms-auto">
               {menuData.map((item) => (
                 <NavLink onClick={()=>{handleClick(item.path)}} key={item.name}>
                   <div className="list_item">{item.name}</div>
                 </NavLink>
               ))}
             </Nav>
-            <Nav className="ms-auto">
+            {/* <Nav className="ms-auto">
               <button className="btn btn-success">Sign Up</button>
-            </Nav>
+            </Nav> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

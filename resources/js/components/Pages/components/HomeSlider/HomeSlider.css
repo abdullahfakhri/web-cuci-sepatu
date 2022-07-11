@@ -16,9 +16,9 @@
 .imgcarousel{
     object-fit: cover;
     position: relative;
-    top: -200px;
+    top: -100px;
 }
 .carousel2{
     height: 500px;
-    width: 1000px;
+    width: 1600px;
 }
