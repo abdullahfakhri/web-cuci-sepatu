@@ -21,6 +21,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main');
 });
+Route::get('/trackyourshoes', function () {
+    return view('main');
+});
+Route::get('/login', function () {
+    return view('main');
+});
+Route::get('/footer', function () {
+    return view('main');
+});
 
 Route::prefix('dashboard')
     ->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
