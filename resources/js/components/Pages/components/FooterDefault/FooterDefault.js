@@ -11,7 +11,7 @@ export const FooterDefault = () => {
           {/* Column1 */}
           <div className="col">
             <h3>ABOUT US</h3>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li className='paragraf1'>
                 Wrap your Shoes merupakan sebuah usaha yang bergerak di bidang jasa 
                 yang menyediakan jasa laundry/cuci sepatu yang berasal dari Kota Depok.
@@ -21,12 +21,12 @@ export const FooterDefault = () => {
                 Ada berbagaimacam service atau layanan yang kami sediakan mulai dari Cuci
                 hingga repaint ulang sepatu anda.
               </li>
-            </ui>
+            </ul>
           </div>
           {/* Column2 */}
           <div className="col">
             <h3>CONTACT US</h3>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>
                 Business Hour:
                 <p>Monday-Saturday: 08:00-18-00</p>
@@ -37,7 +37,7 @@ export const FooterDefault = () => {
               <li>Jl. Masjid Baiturrahman No. 7 Kalimulya, Depok</li>
               <br/>
               <li>Phone: 087873759172</li>
-            </ui>
+            </ul>
           </div>
           {/* <div className="col">
             <h4>Stuff</h4>
@@ -50,10 +50,10 @@ export const FooterDefault = () => {
           {/* Column3 */}
           <div className="col">
             <h4>Our Social Media</h4>
-            <ui className="social list-unstyled">
+            <ul className="social list-unstyled">
               <li className="icon1"><a href='#'><FontAwesomeIcon icon="fa-brands fa-whatsapp" size="xl" /></a></li>
               <li className="icon2"><a href='#'><FontAwesomeIcon icon="fa-brands fa-instagram" size="xl"/></a></li>
-            </ui>
+            </ul>
           </div>
         </div>
         <hr />
