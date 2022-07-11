@@ -1,5 +1,7 @@
 import React from 'react'
 import "../FooterDefault/FooterDefault.css"
+import whastapp from "../../Img/whastapp.png"
+import instagram from "../../Img/instagram.png"
 // import "../FontawsomeIcons/Font"
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -50,10 +52,24 @@ export const FooterDefault = () => {
           {/* Column3 */}
           <div className="col">
             <h4>Our Social Media</h4>
-            {/* <ul className="social list-unstyled">
-              <li className="icon1"><a href='#'><FontAwesomeIcon icon="fa-brands fa-whatsapp" size="xl" /></a></li>
-              <li className="icon2"><a href='#'><FontAwesomeIcon icon="fa-brands fa-instagram" size="xl"/></a></li>
-            </ul> */}
+            <ul className="social list-unstyled">
+                <img
+                    className='logo-whatsapp'
+                    src={whastapp}
+                    width="25"
+                    height="25"
+                    alt="logo"
+                />
+                <img
+                    className='logo-instagram'
+                    src={instagram}
+                    width="25"
+                    height="25"
+                    alt="logo"
+                />
+              {/* <li className="icon1"><a href='#'><FontAwesomeIcon icon="fa-brands fa-whatsapp" size="xl" /></a></li>
+              <li className="icon2"><a href='#'><FontAwesomeIcon icon="fa-brands fa-instagram" size="xl"/></a></li> */}
+            </ul>
           </div>
         </div>
         <hr />
