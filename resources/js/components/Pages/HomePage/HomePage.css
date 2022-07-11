@@ -1,0 +1,36 @@
+.layoutAbout{
+    /* border: 3px solid rgb(153, 51, 51); */
+    position: absolute;
+    margin-left: 450px; 
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+hr.primary{
+    border-top: 6px solid #c2b49a;
+    max-width: 100px;
+    margin: 25px auto;
+}
+.cardDefault{
+    margin-top: 200px;
+}
+.service{
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:680px){
+
+	#maincontent{
+		width: auto;
+		float: none;
+	}
+	#sidebar{
+		width: auto;
+		float: none;
+	}
+}
