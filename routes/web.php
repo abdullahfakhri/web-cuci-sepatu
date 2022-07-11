@@ -24,9 +24,9 @@ Route::get('/', function () {
 Route::get('/trackyourshoes', function () {
     return view('main');
 });
-Route::get('/login', function () {
-    return view('main');
-});
+// Route::get('/login', function () {
+//     return view('main');
+// });
 Route::get('/footer', function () {
     return view('main');
 });
